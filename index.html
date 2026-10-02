@@ -9,7 +9,7 @@
 <body>
   <nav class="nav">
     <a class="brand" href="index.html">Opp<span>Vault</span></a>
-    <button class="menu" type="button">Menu</button>
+    <button class="menu" type="button" aria-label="Open menu">Menu</button>
     <div class="links">
       <a href="about.html">About</a>
       <a href="offers.html">Student Offers</a>
@@ -19,9 +19,13 @@
       <a href="fellowships.html">Fellowships</a>
     </div>
   </nav>
-  <main class="wrap">
-    <section class="hero">
-      <div>
+  <section class="stage">
+    <video class="stage-video" autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4" />
+    </video>
+    <div class="stage-shade"></div>
+    <div class="wrap">
+      <div class="glass hero-copy">
         <div class="kicker">Locked until you need it</div>
         <h1>The vault for student opportunities.</h1>
         <p class="lead">Student discounts are open. Scholarships and fellowships are the next doors. One place to search, check the source, and claim what is actually live.</p>
@@ -30,17 +34,34 @@
           <a class="btn" href="about.html">What this is</a>
         </div>
       </div>
-      <div class="vault" aria-hidden="true"><div class="cloth"></div><div class="diamond"></div><div class="chain"></div><div class="lock">7 3 5</div></div>
-    </section>
+    </div>
+  </section>
+  <main class="wrap">
     <section class="section">
       <div class="grid">
-        <a class="card" href="courses.html"><div class="mark">▣</div><strong>Free courses</strong><p>No-pay tracks from places that already publish them. No fake certificates.</p></a>
-        <a class="card" href="fellowships.html"><div class="mark">♛</div><strong>Fellowships</strong><p class="soon">Coming next</p><p>Funded programmes and research seats. Backend lands later.</p></a>
-        <a class="card" href="scholarships.html"><div class="mark">▤</div><strong>Scholarships</strong><p class="soon">Coming next</p><p>Deadline, eligibility, and the official application link. Not a rumour list.</p></a>
+        <a class="card glass" href="courses.html">
+          <div class="mark">▣</div>
+          <strong>Free courses</strong>
+          <p>No-pay tracks from places that already publish them. No fake certificates.</p>
+        </a>
+        <a class="card glass" href="fellowships.html">
+          <div class="mark">♛</div>
+          <strong>Fellowships</strong>
+          <p class="soon">Coming next</p>
+          <p>Funded programmes and research seats. Backend lands later.</p>
+        </a>
+        <a class="card glass" href="scholarships.html">
+          <div class="mark">▤</div>
+          <strong>Scholarships</strong>
+          <p class="soon">Coming next</p>
+          <p>Deadline, eligibility, and the official application link. Not a rumour list.</p>
+        </a>
       </div>
     </section>
     <footer>OppVault. Re-check every claim link before you rely on a discount or a deadline.</footer>
   </main>
-  <script>document.querySelector(".menu").onclick = () => document.querySelector(".links").classList.toggle("open");</script>
+  <script>
+    document.querySelector(".menu").onclick = () => document.querySelector(".links").classList.toggle("open");
+  </script>
 </body>
 </html>
