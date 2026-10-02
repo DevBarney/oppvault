@@ -69,3 +69,25 @@ footer { color: var(--muted); padding: 36px 0 28px; font-size: 13px; }
   .menu { display: block; }
   .vault { height: 300px; }
 }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 24px rgba(62,203,255,.45); } 50% { box-shadow: 0 0 54px rgba(62,203,255,.95); } }
+@keyframes drift { 0%, 100% { transform: translate(-50%, -50%) rotate(45deg); } 50% { transform: translate(-50%, -56%) rotate(45deg); } }
+@keyframes sway { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-8px); } }
+@keyframes shine { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+.hero > div { animation: rise .7s ease both; }
+.vault { animation: rise .9s ease .1s both; }
+.diamond { animation: drift 3.4s ease-in-out infinite, pulse 2.6s ease-in-out infinite; }
+.cloth { animation: sway 6s ease-in-out infinite; }
+.card { animation: rise .6s ease both; transition: transform .2s ease, border-color .2s ease; }
+.card:nth-child(2) { animation-delay: .12s; }
+.card:nth-child(3) { animation-delay: .22s; }
+.card:hover { transform: translateY(-4px); border-color: rgba(62,203,255,.55); }
+.btn { transition: transform .15s ease, filter .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.gold { background-size: 180% 180%; animation: shine 3.5s linear infinite alternate; }
+.brand::before { animation: pulse 2.8s ease-in-out infinite; border-radius: 8px; }
+.row { animation: rise .45s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}
