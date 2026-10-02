@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OppVault</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">Opp<span>Vault</span></a>
+    <button class="menu" type="button">Menu</button>
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="offers.html">Student Offers</a>
+      <a href="faq.html">FAQ</a>
+      <a href="courses.html">Free Courses</a>
+      <a href="scholarships.html">Scholarships</a>
+      <a href="fellowships.html">Fellowships</a>
+    </div>
+  </nav>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="kicker">Locked until you need it</div>
+        <h1>The vault for student opportunities.</h1>
+        <p class="lead">Student discounts are open. Scholarships and fellowships are the next doors. One place to search, check the source, and claim what is actually live.</p>
+        <div class="actions">
+          <a class="btn gold" href="offers.html">Open student offers</a>
+          <a class="btn" href="about.html">What this is</a>
+        </div>
+      </div>
+      <div class="vault" aria-hidden="true"><div class="cloth"></div><div class="diamond"></div><div class="chain"></div><div class="lock">7 3 5</div></div>
+    </section>
+    <section class="section">
+      <div class="grid">
+        <a class="card" href="courses.html"><div class="mark">▣</div><strong>Free courses</strong><p>No-pay tracks from places that already publish them. No fake certificates.</p></a>
+        <a class="card" href="fellowships.html"><div class="mark">♛</div><strong>Fellowships</strong><p class="soon">Coming next</p><p>Funded programmes and research seats. Backend lands later.</p></a>
+        <a class="card" href="scholarships.html"><div class="mark">▤</div><strong>Scholarships</strong><p class="soon">Coming next</p><p>Deadline, eligibility, and the official application link. Not a rumour list.</p></a>
+      </div>
+    </section>
+    <footer>OppVault. Re-check every claim link before you rely on a discount or a deadline.</footer>
+  </main>
+  <script>document.querySelector(".menu").onclick = () => document.querySelector(".links").classList.toggle("open");</script>
+</body>
+</html>
